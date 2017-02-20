@@ -1,2 +1,3 @@
 # ignore jekyll build
 _site/
+.DS_store
