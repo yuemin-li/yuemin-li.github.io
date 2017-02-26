@@ -11,7 +11,7 @@ One of the comman pitfall is that, if you initiate a slice with a capacity, like
 We may take a deeper look at the behavior with consideration of where the slice pointer is, when talking about capacity.
 Try the following code for instance: 
 
-{% highlight go linenos %}
+```go
 package main
 
 import (
@@ -29,7 +29,7 @@ func main() {
 	fmt.Println(len(s4), cap(s4), s4, &s4[0]) //print: 2 4 [2 3] 0x104401a4
 
 }
-{% endhighlight %}
+```
 
 Note that s2 is still have a hidden capacity as we expected. However, s3 and s4 already shrink the capacity itself. And only removed the beginning portion of the allocated capacity, since the pointer moved towards the end.
 
